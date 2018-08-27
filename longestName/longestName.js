@@ -7,7 +7,22 @@ var people = [
 ];
 
 function longestName(people) {
-  // TODO: Your code here
+  var nameLength=[]
+  var maxLength=0;
+  var longestName;
+  
+  for(i=0;i<people.length;i++){
+    var name='';
+    for(var key in people[i].name){
+      name+=people[i].name[key];
+    }    
+    if(maxLength<name.length){
+      maxLength=name.length;
+      longestName=name;
+    }
+  }
+  //console.log(longestName,maxLength)
+  return longestName
 }
 
 longestName(people); //"Alyssa P. Hacker"
