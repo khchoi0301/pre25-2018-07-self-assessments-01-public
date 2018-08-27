@@ -1,6 +1,10 @@
 function range(start, end) {
-  // YOUR CODE HERE
-  return
+  var numbers=[];
+  for(i=start;i<end;i++){
+    numbers.push(i);
+  }
+  //console.log(numbers);
+  return numbers
 }
 
 range(0, 4); // => [0, 1, 2, 3]
