@@ -4,7 +4,7 @@ function offLineMinimum(strArr) {
   subset=[];
   var testArr=strArr;
   (function iter(testArr){
-    console.log('start',testArr,testArr.length)
+    //console.log('start',testArr,testArr.length)
     for(var i=0;i<testArr.length;i++){
       if(testArr[i]==='E'){        
         testArr.splice(i,1);
@@ -13,9 +13,9 @@ function offLineMinimum(strArr) {
         iter(testArr);
       } 
     }
-    console.log('finish')
+    //console.log('finish')
   })(testArr)   
-  console.log(subset.join(','));
+  //console.log(subset.join(','));
   return subset.join(',');
 }
 
