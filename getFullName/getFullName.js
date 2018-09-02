@@ -1,9 +1,9 @@
 function getFullName(obj) {
-  name="";
+  var fullname=[];
   for(var key in obj.name){
-    name+=obj.name[key]+' '
+    fullname.push(obj.name[key])
   }
-  return name;
+  return fullname.join(' ');
 }
 
 var person = {
