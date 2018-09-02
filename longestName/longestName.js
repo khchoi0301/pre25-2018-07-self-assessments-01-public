@@ -7,21 +7,22 @@ var people = [
 ];
 
 function longestName(people) {
-  var nameLength=[]
   var maxLength=0;
   var longestNameStr;
   
   for(i=0;i<people.length;i++){
-    var name='';
+    var name=[];
+    var fullName;
     for(var key in people[i].name){
-      name+=people[i].name[key]+' ';
+      name.push(people[i].name[key]);
+      fullName=name.join(' ');
     }    
     if(maxLength<name.length){
-      maxLength=name.length;
-      longestNameStr=name;
+      maxLength=fullName.length;
+      longestNameStr=fullName;
     }
   }
-  //console.log(longestNameStr,maxLength)
+
   return longestNameStr
 }
 
