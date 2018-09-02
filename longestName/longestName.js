@@ -9,20 +9,20 @@ var people = [
 function longestName(people) {
   var nameLength=[]
   var maxLength=0;
-  var longestName;
+  var longestNameStr;
   
   for(i=0;i<people.length;i++){
     var name='';
     for(var key in people[i].name){
-      name+=people[i].name[key];
+      name+=people[i].name[key]+' ';
     }    
     if(maxLength<name.length){
       maxLength=name.length;
-      longestName=name;
+      longestNameStr=name;
     }
   }
-  //console.log(longestName,maxLength)
-  return longestName
+  //console.log(longestNameStr,maxLength)
+  return longestNameStr
 }
 
 longestName(people); //"Alyssa P. Hacker"
