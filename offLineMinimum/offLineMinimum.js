@@ -1,5 +1,3 @@
-
-
 function offLineMinimum(strArr) {
   var subset=[];
   var testArr=strArr;
@@ -25,11 +23,17 @@ function offLineMinimum(strArr) {
         minNumpos=i;
       }    
     } 
-    subset.push(minNum);
+    subset.push(Number(minNum));
     return minNumpos; 
   }
 }
 
 offLineMinimum(["1","2","E","E","3"]); // => '1,2'
-offLineMinimum(["4","E","1","E","2","E","3","E"]); // => '4,1,2,3'
-offLineMinimum(["3","E","21","E","1","2","E","E"]); // 3,21,1,2
+
+//offLineMinimum(["4","3","1","2","E","E","3","E"]); // => '1,2,3'
+
+//offLineMinimum(["4","E","1","2","E","E","3","E"]); // => '4,1,2,3'
+
+
+//offLineMinimum(["4","E","1","E","2","E","3","E"]); // => '4,1,2,3'
+//offLineMinimum(["3","E","21","E","1","2","E","E"]); // 3,21,1,2
